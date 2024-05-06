@@ -38,8 +38,7 @@ def get_symbol(text: str) -> str:
         return text + " 👎"
 
 
-# @app.schedule(Cron(day_of_week="FRI", hours=21))
-@app.schedule(Cron(0, 21, "?", "*", 5, "*"))
+@app.schedule(Cron(0, 13, "?", "*", 6, "*"))
 def periodic_task(event):
     today = datetime.now()
     # today = datetime.strptime("26/04/2024", "%d/%m/%Y")
